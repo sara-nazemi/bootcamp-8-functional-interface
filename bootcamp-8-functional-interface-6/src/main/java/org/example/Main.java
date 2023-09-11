@@ -9,21 +9,20 @@ public class Main {
     public static void main(String[] args) {
 
         Supplier<String> generatePassword = () -> {
-            int generateLength = 3;
 
             // help from:
             // http://www.java2s.com/ref/java/java-math-random-character-generate.html
 
             // A - Z
             StringBuilder upper = new StringBuilder();
-            for (int i = 0; i < generateLength; i++) {
+            for (int i = 0; i < 3; i++) {
                 int number = 65 + (int) (Math.random() * (91 - 65));
                 upper.append((char) (number));
             }
 
             // a - z
             StringBuilder lower = new StringBuilder();
-            for (int i = 0; i < generateLength; i++) {
+            for (int i = 0; i < 3; i++) {
                 int number = 97 + (int) (Math.random() * (122 - 97));
                 lower.append((char) (number));
             }
